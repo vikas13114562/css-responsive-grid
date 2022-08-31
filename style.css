@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(99, 98, 98);
+    text-align: center;
+    color: white;
+    
+}
+
+/* --------tag----------- */
+
+span {
+    font-size: 30px;
+}
+
+p {
+    line-height: 0.7cm;
+}
+
+/* ------------------- class ------------------- */
+
+.btn {
+    width: 130px;
+    height: 30px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+}
+
+.container {
+    height: 80vh;
+    width: 80vw;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+.first-row{
+    grid-row: 1 / 2;
+    background-color: rgb(255, 253, 253);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.first-row-h2 {
+    color: #42855B;
+}
+
+.first-row-p {
+    color: gray;
+    font-size: larger;
+}
+
+.second-row {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row: 2 / -1;  
+}
+
+.subscription {
+    grid-column: 1 / 2;
+    background-color: rgb(15, 67, 66);
+    border-bottom-left-radius: 11px;
+}
+
+.why-us {
+    grid-column: 2 / -1;
+    background-color: rgba(85, 145, 142, 0.698);
+    border-bottom-right-radius: 11px;
+}
+
+/* --------------------id------------------ */
+
+#heading-text {
+    color: #7FBCD2;
+}
+@media only screen and (max-width: 600px){
+    .container {
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: 1fr;
+        grid-row-gap: 5px;
+    }
+    .first-row {
+        grid-row: 1 / 2;
+        grid-column: 1/ -1;
+    }
+    .second-row {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        /* grid-row-gap: 5px; */
+    }
+
+    .subscription {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        
+    }
+    
+    .why-us {
+        grid-column: 1 / -1;
+        grid-row: 3 / -1;
+        
+    }
+    
+}
